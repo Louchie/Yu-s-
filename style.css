@@ -1,0 +1,699 @@
+/* Desin générale -------------------------------------------------------------*/
+*{
+	margin: 0px;
+	padding: 0px; 
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+/* Desin typographique --------------------------------------------------------*/
+/* Titre */
+
+h1 {
+	color: black;
+	font-size: 60px;
+	font-family: 'Ma Shan Zheng', cursive;
+}
+
+/* Textes */
+p{
+	font-family: arial;
+	font-size: 12px;
+}
+
+/* Header ---------------------------------------------------------------------*/
+header{
+	width: 100vw;
+	height: 10vh;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 0px 10px black;
+	position: fixed;
+	z-index: 9999;
+}
+
+.Logo{
+	align-items: flex-start;
+} 
+
+.boutonMenu{
+	color: black;
+	text-decoration: none;
+	font-size: 15px;
+	margin-right: 20px;
+}
+
+.menuFantome{
+	width: 100vw;
+	height: 10vh;
+}
+
+label {
+	font-size: 40px;
+	display: none;
+	color: black;
+}
+
+#switch{
+	display: none;
+}
+
+nav a:hover{
+	background-color: #c2cad7; 
+}
+
+@media (max-width: 600px){
+	header {
+		display: block;
+	}
+
+	nav {
+		display: none;
+	}
+
+	label {
+		display: block;
+		float: right;
+	}
+
+	#switch:checked + nav{
+		display: block;
+		clear: both;
+	}
+
+	.boutonMenu{
+		color: black;
+		text-shadow: none;
+	}
+
+	.Logo {
+		float: left;
+	}
+
+	nav a {
+		width: 100%;
+		display: block;
+		text-align: center;
+		background-color: white;
+		padding-top: 20px; 
+		padding-bottom: 20px;
+		border-bottom: 4px solid black;
+	}
+
+	nav a:hover{
+	background-color: #c2cad7;
+	}
+}
+
+/* Section 1 ------------------------------------------------------------------*/
+.Section1 {
+	width: 100vw;
+	min-height: 70vh;
+	background-image: url(Images/Hello.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding-top: 20vh;
+}
+
+.Blocsection1{
+	width: 20vw;
+	height: auto;
+	background-color: rgba(255,255,255,0.5);
+	margin-left: 10vw;
+}
+
+.Texte1{
+	font-size: 20px;
+	margin-left: 5px;
+}
+
+.Arrrow{
+	width: 10px;
+}
+
+@media (max-width: 700px){
+	.Section1{
+		width: 100vw;
+		min-height: 43vh;
+		padding-top: 20vh;
+	}
+
+	.Blocsection1{
+		width: 100vw;
+		height:auto; 
+		font-size: 17px;
+		margin-left: -0vw;
+		text-align: center;
+	}
+
+	.Texte1{
+		font-size: 18px;
+		margin-top: -162px;
+		margin-bottom: -25px;
+	}
+}
+
+
+/* Section 2 ------------------------------------------------------------------*/
+.Section2 {
+	width: 100vw;
+	height: 87vh;
+	background-image: url(Images/marbre3.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding-top: 3vh;
+}
+
+h2{
+	margin-left: 20px;
+}
+
+.blocsection2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: -40px;
+}
+
+.Categorie{
+	width: 15vw;
+	text-align: center;
+	font-size: 35px;
+	color: white; 
+	text-shadow: 0px 0px 1px black;
+	text-decoration: none;
+	border: 0.5px solid black; 
+	background-color: #c2cad7;
+}
+
+/*Changement de couleur ----------------- */
+.Categorie:hover{
+	animation-name: ChangementCouleur;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes ChangementCouleur {
+	0%{background-color: #c2cad7;}
+	32.5%{background-color: #97a7be;}
+	65%{background-color: #97a7be;}
+	100%{background-color: #c2cad7;}
+}
+/* END -----------*/ 
+
+.Vet{
+	width: 13%;
+	margin: 30px;
+	border-radius: 50%;
+	border: 1px solid black; 
+}
+
+.Vet:hover{
+	border-radius: 45%;
+	box-shadow: 0px 0px 10px rgba(0 ,0 ,0, 0.5);
+	animation-name: Rondeur; /* Arrondi */
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes Rondeur {
+	0%{border-radius: 50%;}
+	100%{border-radius: 10px;}
+}
+
+.textes2{
+	width: 15vw;
+}
+
+@media (max-width: 970px){
+	.Section2{
+		width: 100vw;
+		height: 152vh;
+	}
+
+	.blocsection2{
+		flex-direction: column;
+		margin-bottom: 20px;
+		margin-top: 15px;
+	}
+
+	.Categorie{
+		width: 40vw;
+	}
+
+	.Vet{
+		width: 200px;
+	}
+
+	.textes2{
+		width: 65vw;
+		min-height: 10vh;
+	}
+}
+
+/* Section 3-------------------------------------------------------------------*/
+.Section3 {
+	width: 100vw;
+	height: 305vh;
+	background-image: url(Images/marbre3.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding-top: 3vh;
+}
+
+.Grosblocsection3{
+	margin-bottom: 20px;
+}
+
+.Blocsection3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	justify-content: space-around;
+}
+
+.Informations{
+	text-align: left;
+	font-size: 14px;
+	font-family: 'Merriweather', serif;
+}
+
+.Prix{
+	font-size: 11px;
+	font-family: 'Merriweather', serif;
+}
+
+.Texte3 {
+	width: 20vw;
+}
+
+/*Début des effets T-shirt ------------------------*/ 
+/* Photo 1 effet */
+.Photo1{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Fluo.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo1:hover{
+	background-image: url(Images/Fluo-b.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 2 effet */
+.Photo2{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Petale.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo2:hover{
+	background-image: url(Images/Petale2.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 3 effet */
+.Photo3{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/T-shirt.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo3:hover{
+	background-image: url(Images/T-shirt-front.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 4 effet */
+.Photo4{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Sakura.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo4:hover{
+	background-image: url(Images/Sakura-b.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 5 effet */
+.Photo5{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Dragon.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo5:hover{
+	background-image: url(Images/Dragon2.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+/* End des effets des T-shirts  */ 
+
+
+/*Début des effets des Pull ------------------------*/ 
+/* Photo 6 effet */
+.Photo6{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Col.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo6:hover{
+	background-image: url(Images/Col2.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 7 effet */
+.Photo7{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Eeku.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo7:hover{
+	background-image: url(Images/Eekublack.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 8 effet */
+.Photo8{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Maille.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo8:hover{
+	background-image: url(Images/Maille2.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 9 effet */
+.Photo9{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Pull2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo9:hover{
+	background-image: url(Images/Pull.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 10 effet*/
+.Photo10{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Doux.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo10:hover{
+	background-image: url(Images/Doux2.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+/* End des effet des Pulls */
+
+
+/* Début des effets des Manteaux -----------------------*/
+/* Photo 11 effet */
+.Photo11{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Trench.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo11:hover{
+	background-image: url(Images/Trench-b.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 12 effet */
+.Photo12{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Veste.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo12:hover{
+	background-image: url(Images/Veste2.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 13 effet */
+.Photo13{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/B.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo13:hover{
+	background-image: url(Images/B-3.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 14 effet */
+.Photo14{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Moumoutte.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo14:hover{
+	background-image: url(Images/Moumoutte2.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+
+/* Photo 15 effet */
+.Photo15{
+	width: 20vw;
+	height: 40vh;
+	background-image: url(Images/Doudoune2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Photo15:hover{
+	background-image: url(Images/Doudoune.jpg);
+	opacity: 1;
+	transition: opacity 0.9s ease;
+}
+/* End des effets des Mnateaux*/ 
+
+@media (max-width: 970px){
+	.Section3{
+		height: 245vh;
+	}
+	.Blocsection3{
+		display: flex;
+		justify-content: space-around;
+	}
+	.Photo1, .Photo2,.Photo3, .Photo4, .Photo5, .Photo6, .Photo7, .Photo8, .Photo9, .Photo10, .Photo11, .Photo12, .Photo13, .Photo14, .Photo15 {
+		width: 20vw;
+		height: 30vh;
+	}
+}
+
+@media (max-width: 750px){
+	.Section3{
+		height: 213vh;
+	}
+	.Photo1, .Photo2,.Photo3, .Photo4, .Photo5, .Photo6, .Photo7, .Photo8, .Photo9, .Photo10, .Photo11, .Photo12, .Photo13, .Photo14, .Photo15{
+		width: 25vw;
+		height: 25vh;
+	} 
+	.Texte3 {
+	width: 25vw;
+	}
+}
+
+@media (max-width: 480px){
+	.Section3{
+		height: 150vh;
+	}
+	.Photo1, .Photo2,.Photo3, .Photo4, .Photo5, .Photo6, .Photo7, .Photo8, .Photo9, .Photo10, .Photo11, .Photo12, .Photo13, .Photo14, .Photo15{
+		width: 25vw;
+		height: 15vh;
+	} 
+	.Informations{
+		font-size: 10px;
+	}
+	.Texte3 {
+	width: 25vw;
+	font-size: 8px;
+	margin-bottom: 22px;
+	}
+}
+/* Section 4 ------------------------------------------------------------------*/
+.Section4 {
+	width: 100vw;
+	height: 87vh;
+	box-shadow: 0px 0px 4px rgba(0 ,0 ,0.5);
+	background-image: url(Images/marbre3.jpg);
+	background-size: cover;
+	background-position: center;
+	padding-top: 3vh;
+}
+
+.Icons{
+	width: 5%;
+	margin-right: 3px;
+}
+
+.Iconssmiley{
+	width: 4.5%;
+	margin-right: 6px;
+}
+
+.Colis{
+	width: 5%;
+	margin-right: 10px;
+}
+.Texte4{
+	width: 30vw;
+	font-size: 14px;
+}
+
+.blocsection4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	margin-top: 25px;
+}
+
+.bloc{
+	width: 30vw;
+}
+
+@media (max-width: 970px){
+	.Section4 {
+		width: 100vw;
+		height: auto;
+	}
+	.Icons{
+		width: 10vw;
+	}
+	.Iconssmiley{
+	width: 9vw;
+	}
+
+	.Colis{
+		width: 10vw;
+	}
+
+	.Texte4{
+		width: 40vw;
+	}
+	.bloc{
+	width: 40vw;
+	}
+}
+
+/* Section 5 ------------------------------------------------------------------*/
+.Section5{
+	width: 100vw;
+	height: 55vh;
+	box-shadow: 0px 0px 4px rgba(0 ,0 ,0.5);
+	background-color: grey;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.TS5{
+	text-align: center;
+	margin-bottom: 55px;
+}
+
+
+.Yu{
+	font-family: 'Ma Shan Zheng', cursive;
+	font-size: 100px;
+}
+
+@media (max-width: 970px){
+	.TS5{
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 600px){
+	.Section5{
+		height: 45vh;
+	}
+}
+
+/* Footer ---------------------------------------------------------------------*/
+footer{ 
+	height: 8vh;
+	background-color: #333333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer a {
+ 	color: black;
+ 	text-decoration: none;
+ 	margin: 15px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
